@@ -137,8 +137,8 @@
 	;date = 
 	date-alt = %A, %d %B %Y
 
-	time = %H:%M
-	time-alt = %H:%M:%S
+	time = %I:%M
+	time-alt = %I:%M:%S
 
 	format =  <label>
 	;format-background = #222
