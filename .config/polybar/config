@@ -18,14 +18,22 @@
 
 [colors]
 	;background = ${xrdb:color0:#222}
-	background = #222
-	background-alt = #444
+	background = #282a36
+	background-alt = #44475a
 	;foreground = ${xrdb:color7:#222}
-	foreground = #dfdfdf
+	foreground = #f8f8f2
 	foreground-alt = #555
-	primary = #ffb52a
+	primary = #50fa7b
 	secondary = #e60053
 	alert = #bd2c40
+	commentDracula = #6272a4
+	cyanDracula = #8be9fd
+	greenDracula = #50fa7b
+	orangeDracula = #ffb86c
+	pinkDracula = #ff79c6 	
+	purpleDracula = #bd93f9
+	redDracula = #ff5555
+	yellowDracula = #f1fa8c
 
 [bar/example]
 	;monitor = ${env:MONITOR:HDMI-1}
@@ -51,18 +59,19 @@
 	module-margin-left = 1
 	module-margin-right = 2
 
-	font-0 = fixed:pixelsize=10;1
+	font-0 = fixed:pixelsize=10;2
 	font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
-	font-2 = siji:pixelsize=10;1
-	
+	font-2 = siji:pixelsize=10;2
+	font-3 = FontAwesome 5 Free:size=10:style=Solid;1
 	;font-0 = Font Awesome 5 Free:pixelsize=10;3
-	font-n = Font Awesome 5 Free Solid:pixelsize=10;3
+	;font-3= Font Awesome 5 Free Solid:pixelsize=10;3
 	;font-2 = Font Awesome 5 Brands:pixelsize=10;3
+	
 
 
 	modules-left = i3
-	modules-center = mpd xwindow 
-	modules-right = filesystem xbacklight alsa pulseaudio xkeyboard memory cpu eth battery temperature date powermenu
+	modules-center = xwindow 
+	modules-right = volume filesystem xbacklight alsa pulseaudio xkeyboard memory cpu eth battery temperature date powermenu
 
 	tray-position = right
 	tray-padding = 2
@@ -119,7 +128,8 @@
 [module/cpu]
 	type = internal/cpu
 	interval = 0.5
-	label = CPU %percentage%%
+	label =  %percentage%%
+	label-foreground = ${colors.pinkDracula}
 
 [module/date]
 	type = internal/date
@@ -130,26 +140,29 @@
 	time = %H:%M
 	time-alt = %H:%M:%S
 
-	format = 🕓 <label>
-	format-background = #222
-	format-foreground = #444
+	format =  <label>
+	;format-background = #222
+	;format-foreground = #444
 
 	label = %date% %time%
 	label-font = 3
-	label-foreground = #fff
+	label-foreground = ${colors.cyanDracula}
 
 [module/memory]
 	type = internal/memory
 	interval = 3
 	format = <label>
-	label =  %gb_used%
+	label =  %gb_used%
+	label-foreground = ${colors.orangeDracula}
 
 [module/powermenu]
 	type = custom/menu
 
-	label-open = POWER
-	label-close = close
-	;label-open-padding = 3 
+	label-open = ""
+	label-open-foreground = ${colors.redDracula}
+	label-close = 
+	label-close-foreground = ${colors.purpleDracula}
+	label-open-padding =  
 	label-close-padding = 2 
 
 	;menu-0-0 = reboot
@@ -169,15 +182,18 @@
 	;menu-0-1-padding = 2
 	;menu-0-2-padding = 2
 
-	menu-0-0 = logout
+	menu-0-0 = 
 	menu-0-0-exec = i3 exit
-	menu-0-1 = reboot
-	menu-0-1-exec = systemctl reboot
-	menu-0-2 = power off
-	menu-0-2-exec = systemctl poweroff
+	menu-0-0-foreground = ${colors.pinkDracula}
 	menu-0-0-padding = 2
+	menu-0-1 = 
+	menu-0-1-exec = systemctl reboot
+	menu-0-1-foreground = ${colors.orangeDracula}
 	menu-0-1-padding = 2
-	menu-0-2-padding = 2
+	menu-0-2 = 
+	menu-0-2-foreground = ${colors.yellowDracula}
+	menu-0-2-exec = systemctl poweroff
+	menu-0-2-padding = 2	
 
 	;confirm logout
 	;menu-1-0 = logout?  
@@ -194,5 +210,9 @@
 	;menu-3-0-exec = systemctl poweroff
 	;menu-3-0-padding = 2
 
-
-
+[module/xwindow]
+	type = internal/xwindow
+	;label-font = 3
+	;label-maxlen = 25
+	;format-foreground = #b8bfc6
+	label = "%title:0:50:...%"
