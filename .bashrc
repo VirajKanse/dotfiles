@@ -3,6 +3,8 @@
 # for examples
 echo ''
 pfetch
+#sh $HOME/Documents/colorscript.sh
+#echo ''
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
@@ -107,3 +109,4 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
 fi
 
 alias config='/usr/bin/git --git-dir=/home/vk-i3/dotfiles/ --work-tree=/home/vk-i3'
+export PYTHONPATH=/usr/lib/python3.7/site-packages
