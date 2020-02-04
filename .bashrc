@@ -108,4 +108,4 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
-alias config='/usr/bin/git --git-dir=/home/adevdx/dotfiles/ --work-tree=/home/adevdx'
+alias gitd='/usr/bin/git --git-dir=/home/adevdx/dotfiles/ --work-tree=/home/adevdx'
