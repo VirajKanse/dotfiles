@@ -67,11 +67,9 @@
 	;font-3= Font Awesome 5 Free Solid:pixelsize=10;3
 	;font-2 = Font Awesome 5 Brands:pixelsize=10;3
 	
-
-
 	modules-left = i3
-	modules-center = xwindow 
-	modules-right = volume filesystem xbacklight alsa pulseaudio xkeyboard memory cpu eth battery temperature date powermenu
+	modules-center = xwindow
+	modules-right = volume filesystem alsa pulseaudio xkeyboard memory cpu eth network date powermenu
 
 	tray-position = right
 	tray-padding = 2
@@ -142,7 +140,7 @@
 
 	format =  <label>
 	;format-background = #222
-	;format-foreground = #444
+	format-foreground = ${colors.yellowDracula}
 
 	label = %date% %time%
 	label-font = 3
@@ -216,3 +214,4 @@
 	;label-maxlen = 25
 	;format-foreground = #b8bfc6
 	label = "%title:0:50:...%"
+
