@@ -113,7 +113,7 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 #i3-gaps
 gaps inner 10
 gaps outer 5
-#smart_borders on
+smart_borders on
 
 # window rules, you can find the window class using xprop
 for_window [class=".*"] border pixel 2
