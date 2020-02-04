@@ -108,5 +108,4 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
-alias config='/usr/bin/git --git-dir=/home/vk-i3/dotfiles/ --work-tree=/home/vk-i3'
-export PYTHONPATH=/usr/lib/python3.7/site-packages
+alias config='/usr/bin/git --git-dir=/home/adevdx/dotfiles/ --work-tree=/home/adevdx'
