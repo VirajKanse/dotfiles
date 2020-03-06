@@ -9,13 +9,14 @@ font pango: Noto Sans 8
 floating_modifier $super
 
 #autostart
-exec --no-startup-id hsetroot -center ~/.wallpaper.png
+exec --no-startup-id hsetroot -center ~/.wallpaper.png 
+
 exec --no-startup-id xsettingsd &
 exec --no-startup-id picom -b
 
 # start a terminal
-bindsym $super+Return exec i3-sensible-terminal
-#bindsym $super+Return exec xfce4-terminal
+#bindsym $super+Return exec i3-sensible-terminal
+bindsym $super+Return exec termite
 
 # start dmenu (a program launcher)
 #bindsym $super+Shift+d exec i3-dmenu-desktop --dmenu="dmenu -i -fn 'Noto Sans:size=8'"
@@ -113,12 +114,12 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 #i3-gaps
 gaps inner 10
 gaps outer 5
-smart_borders on
+#smart_borders on
 
 # window rules, you can find the window class using xprop
-for_window [class=".*"] border pixel 2
+for_window [class=".*"] border pixel 0
 assign [class=URxvt] 1
-assign [class=Firefox|Transmission-gtk] 2
+assign [class=Firefox|Transmission-gtk|vlc] 2
 assign [class=Thunar|File-roller] 3
 assign [class=Geany|Evince|Gucharmap|Soffice|libreoffice*] 4
 assign [class=Audacity|Vlc|mpv|Ghb|Xfburn|Gimp*|Inkscape] 5
