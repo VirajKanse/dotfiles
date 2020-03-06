@@ -1,5 +1,6 @@
 !Font confs
-URxvt.font: xft:monaco:size=10
+!URxvt.font: xft:monaco:size=10
+URxvt.font: xft:Fira Code:style=regular:pixelsize=14:minspace=false
 URxvt.letterSpace: 2
 
 !Scrollbar confs
