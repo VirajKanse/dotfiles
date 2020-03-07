@@ -118,13 +118,13 @@ gaps outer 5
 
 # window rules, you can find the window class using xprop
 for_window [class=".*"] border pixel 0
-assign [class=URxvt|Termite] 1
+assign [class=URxvt] 1
 assign [class=Firefox] 2
 assign [class=Thunar] 3
 assign [class=vlc] 4
 assign [class=libreoffice*] 5
 assign [class=Lxappearance] 6
-for_window [class=Viewnior|Lxappearance|] floating enable
+for_window [class=Viewnior|Lxappearance] floating enable
 for_window [class=URxvt|Firefox|libreoffice*|mpv|Vlc|Lxappearance] focus
 
 #dracula
