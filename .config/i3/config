@@ -19,7 +19,6 @@ exec --no-startup-id picom -b
 bindsym $super+Return exec termite
 
 # start dmenu (a program launcher)
-#bindsym $super+Shift+d exec i3-dmenu-desktop --dmenu="dmenu -i -fn 'Noto Sans:size=8'"
 bindsym $super+d exec rofi -lines 12 -padding 18 -width 60 -location 0 -show drun -sidebar-mode -columns 3 -font 'Noto Sans 8'
 
 # common apps keybinds
@@ -116,17 +115,17 @@ gaps inner 10
 gaps outer 5
 #smart_borders on
 
+
 # window rules, you can find the window class using xprop
 for_window [class=".*"] border pixel 0
-assign [class=URxvt] 1
-assign [class=Firefox|Transmission-gtk|vlc] 2
-assign [class=Thunar|File-roller] 3
-assign [class=Geany|Evince|Gucharmap|Soffice|libreoffice*] 4
-assign [class=Audacity|Vlc|mpv|Ghb|Xfburn|Gimp*|Inkscape] 5
-assign [class=Lxappearance|System-config-printer.py|Lxtask|GParted|Pavucontrol|Exo-helper*|Lxrandr|Arandr] 6
-for_window [class=Viewnior|feh|Audacious|File-roller|Lxappearance|Lxtask|Pavucontrol] floating enable
-for_window [class=URxvt|Firefox|Geany|Evince|Soffice|libreoffice*|mpv|Ghb|Xfburn|Gimp*|Inkscape|Vlc|Lxappearance|Audacity] focus
-for_window [class=Xfburn|GParted|System-config-printer.py|Lxtask|Pavucontrol|Exo-helper*|Lxrandr|Arandr] focus
+assign [class=URxvt|termite] 1
+assign [class=Firefox|] 2
+assign [class=Thunar] 3
+assign [class=vlc] 4
+assign [class=libreoffice*] 5
+assign [class=Lxappearance] 6
+for_window [class=Viewnior|Lxappearance|] floating enable
+for_window [class=URxvt|Firefox|libreoffice*|mpv|Vlc|Lxappearance] focus
 
 #dracula
 #class                 	border  bground text    indicator child_border
