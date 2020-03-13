@@ -122,8 +122,8 @@ assign [class=URxvt|Termite] 1
 assign [class=Firefox|firefox] 2
 assign [class=Thunar|Subl] 3
 assign [class=vlc] 4
-assign [class=libreoffice*] 5
-assign [class=Lxappearance] 6
+assign [class=Lxappearance|Viewnior] 5
+assign [class=libreoffice*] 6
 for_window [class=Viewnior|Lxappearance] floating enable
 for_window [class=URxvt|Firefox|libreoffice*|mpv|Vlc|Lxappearance] focus
 
