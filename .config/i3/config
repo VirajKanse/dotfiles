@@ -95,7 +95,8 @@ bindsym $super+Shift+6 move container to workspace 6
 bindsym $super+Shift+r restart
 
 # exit i3
-bindsym $super+q exec "i3-nagbar -t warning -m 'Really, exit?' -b 'Yes' 'i3-msg exit'"
+#bindsym $super+q exec "i3-nagbar -t warning -m 'Really, exit?' -b 'Yes' 'i3-msg exit'"
+bindsym $super+q exec systemctl poweroff
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -121,7 +122,7 @@ for_window [class=".*"] border pixel 0
 assign [class=URxvt|Termite] 1
 assign [class=Firefox|firefox] 2
 assign [class=Thunar|Subl] 3
-assign [class=vlc] 4
+assign [class=vlc|TelegramDesktop] 4
 assign [class=Lxappearance|Viewnior] 5
 assign [class=libreoffice*] 6
 for_window [class=Viewnior|Lxappearance] floating enable
