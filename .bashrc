@@ -2,7 +2,7 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 #echo ''
-pfetch
+#pfetch
 #sh $HOME/Documents/colorscript.sh
 #echo ''
 # If not running interactively, don't do anything
@@ -108,4 +108,4 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
-alias gitd='/usr/bin/git --git-dir=/home/adevdx/dotfiles/ --work-tree=/home/adevdx'
+alias gitd='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'

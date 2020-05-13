@@ -5,8 +5,8 @@
 
 [options]
 
-font = Fira Code 10
-#cell_height_scale = 1.2
+font = monaco 10
+cell_height_scale = 1.2
 cell_width_scale = 1.3
 
 [colors]
